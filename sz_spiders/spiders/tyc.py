@@ -39,9 +39,7 @@ class TycSpider(scrapy.Spider):
                     chrome.get(href)
 
                     text1 = chrome.find_element_by_xpath(
-                        '//*[@id="_container_baseInfo"]/table[2]/tbody/tr[3]/td[2]').text
-                    # print(item, ',', text1)
-                    # T.saveData(item.strip(), text1)
+                        '//*[@id="_container_baseInfo"]/table[2]/tbody/tr[3]/td[2]').text          
                     u = TYC()
                     u['uscc'] = text1
                     u['cname'] = item
